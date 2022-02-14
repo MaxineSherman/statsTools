@@ -1,5 +1,7 @@
 % function graphEffects(data,Levels,varargin)
 %
+% This is a dependency for rm_ANOVA
+%
 % INPUTS:
 %
 % (1) data: an nsubj x ncond matrix of RM-data to plot
@@ -12,7 +14,9 @@
 %     (iii) DV             = 'criterion'
 %     (iv)  levelNames     = { {'low','med','high'} , {'full','diverted'} }
 %
-% by maxine
+% Maxine Sherman
+% SCCS, Uni Sussex
+% m.sherman@sussex.ac.uk
 
 function graphEffects(data,Levels,varargin)
 
