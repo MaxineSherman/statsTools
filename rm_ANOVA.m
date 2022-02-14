@@ -39,8 +39,8 @@
 %
 % data        = [ 3 1 3 2; 5 2 6 6 ; 4 3 4 5; 7 2 5 4 ; 2 3 2 3];
 % levels      = [2 2];
-% factorNames = { 'intervention' , 'time' }
-% levelNames  = { {'drug' , 'placebo'} , {'pre' , 'post'} }
+% factorNames = { 'intervention' ; 'time' }
+% levelNames  = { {'drug' ; 'placebo'} ; {'pre' ; 'post'} }
 % dvName      = 'depressionScore';
 % ploton      = 1;
 %
