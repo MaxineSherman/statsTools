@@ -1,3 +1,20 @@
+% [m_posterior, s_posterior, posterior_prob] = bayesian_integration( prior , likelihood , donotplot)
+%
+% This function integrates a gaussian prior & gaussian likelihood into a posterior.
+%
+% INPUTS
+%
+% prior is an nx1 or 1xn vector [mu_prior, sigma_prior] 
+% likelihood is an nx1 or 1x1 vector [mu_prior sigma_prior]
+% if you don't want to plot the results, set donotplot to true. default is false (i.e. the code will plot by default)
+%
+% Maxine Sherman
+% SCCS, Uni Sussex
+% m.sherman@sussex.ac.uk
+
+
+
+
 function [m_posterior, s_posterior, posterior_prob] = bayesian_integration( prior , likelihood , donotplot)
 
 if nargin == 2; donotplot = 0; end
