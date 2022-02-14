@@ -47,7 +47,7 @@
 
 
 % maxine 11/8/17
-% THIS IS A WRAP-AROUND
+% Note: This is a wrap-around for matlab's horrible ranova function
 
 function [ranovatbl, X] = rm_ANOVA( data , levels , factorNames , levelNames , dvName , ploton , threshold );
 
