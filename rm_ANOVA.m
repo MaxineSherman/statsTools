@@ -18,8 +18,8 @@
 %
 % OPTIONAL INPUTS:
 %
-% factorNames       = {'Attention','Expectation'}    [IN ORDER OF DATA MATRIX]
-% levelNames        = { { 'Full' , 'Diverted' } , { 'E25' , 'E50' , 'E75' } } [IN ORDER OF DATA MATRIX]
+% factorNames       = {'Attention';'Expectation'}    [IN ORDER OF DATA MATRIX]
+% levelNames        = { { 'Full' ; 'Diverted' } ; { 'E25' ; 'E50' ; 'E75' } } [IN ORDER OF DATA MATRIX]
 % 
 % [OPTIONAL] dvName = 'dprime' (defaults to 'DV')
 % [OPTIONAL] ploton plots all sig. results (defaults to 0)
