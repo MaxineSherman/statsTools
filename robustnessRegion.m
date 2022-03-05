@@ -367,33 +367,37 @@ if plotit
         L1     = 1/sensitive_BF;
         L2     = sensitive_BF;
     end
+
+    % plot RR
+    h1 = plot(linspace(rr(1),rr(2)),ones(100,1)*L1,'Color',[.8 .6 .6],'LineWidth', 8);
+    plot(linspace(rr(1),rr(2)),ones(100,1)*L2,'Color',[.8 .6 .6],'LineWidth', 8);
     
     % plot reference lines
-    plot(P, ones(size(P))*L1, 'k--','LineWidth',2);
-    plot(P, ones(size(P))*L2, 'k--','LineWidth',2);
-    
-    plot(linspace(rr(1),rr(2)),ones(100,1)*L1,'r--');
-    plot(linspace(rr(1),rr(2)),ones(100,1)*L2,'r--');
+    h2 = plot(P, ones(size(P))*L1, 'k--','LineWidth',3);
+         plot(P, ones(size(P))*L2, 'k--','LineWidth',3);
     
     % plot BF
-    plot(P,bf,'r--','LineWidth',2);
+    h3 = plot(P,bf,'Color',[.8 .3 .3],'LineWidth',3);
     
     % plot empirical BF
-    scatter(prior_params(idx),bf_emp,100,'filled');
+    h4 = scatter(prior_params(idx),bf_emp,200,'filled','MarkerFaceColor',[.7 .3 .3],'MarkerEdgeColor','k','LineWidth',3);
+    
+    % legend
+    l  = legend([h4 h3 h1 h2],{'Your BF','BFs by prior','RR','Sensitive BF'},'FontSize',18,'LineWidth',3);
     
     % format
-    xlabel('Prior','FontSize',14)
-    ylabel(yname,'FontSize',14)
-    set(gca,'FontSize',14,'TickLength',[0 0],'YLim',[0 max(bf)],'XLim',[0 xlimit]);
-    
+    xlabel('Prior','FontSize',20)
+    ylabel(yname,'FontSize',20)
+    set(gca,'FontSize',18,'TickLength',[0 0],'LineWidth', 3, 'YLim',[0 max(bf)],'XLim',[0 xlimit]);
+    box on;
 end
 
 
 %% Report results
 
 if nargin == 0
-    sprintf('Your BF is %.3f',BF_empirical)
-    sprintf('Your robustness region is [%.3f , %.3f]. A sensitive BF is > %d or < 1/%d',[RR(1) RR(2) sensitive_BF sensitive_BF])
+    disp(sprintf('Your BF is %.3f',BF_empirical));
+    disp(sprintf('Your robustness region is [%.3f , %.3f]. A sensitive BF is > %d or < 1/%d',[RR(1) RR(2) sensitive_BF sensitive_BF]));
 end
 
 end
