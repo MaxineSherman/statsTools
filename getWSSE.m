@@ -9,8 +9,11 @@
 % WSSE                   A 1 x nconditions vector containing the within-subject standard error for each condition
 %
 %
-% Maxine Sherman
-% m.sherman@sussex.ac.uk
+% =========================================================================
+% v1.0 
+% For questions/comments please email Maxine Sherman
+% m.sherman@sussex.ac.uk / maxinesherman@gmail.com
+% =========================================================================
                 
 
 function WSSE = getWSSE(data)
